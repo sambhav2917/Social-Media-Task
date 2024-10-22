@@ -8,7 +8,8 @@ const AdminDashboard = () => {
     useEffect(() => {
         const fetchSubmissions = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/submissions');
+                const url='https://social-media-task-0l7o.onrender.com/submissions' || 'http://localhost:5000/submissions';
+                const response = await axios.get(url);
                 setSubmissions(response.data);
             } catch (error) {
                 console.error('Error fetching submissions', error);

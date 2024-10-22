@@ -26,7 +26,8 @@ const UserForm = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:5000/submit', formData, {
+            const url ='https://social-media-task-0l7o.onrender.com/submit' || 'http://localhost:5000/submit';
+            const response = await axios.post(url, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
