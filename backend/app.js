@@ -47,6 +47,9 @@ app.post('/submit', upload.array('images', 10), async (req, res) => {
     }
 });
 
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+})
 // API to fetch submitted data
 app.get('/submissions', async (req, res) => {
     try {
